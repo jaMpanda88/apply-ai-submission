@@ -36,7 +36,7 @@ const firestore = new Firestore();
 const getPredictHandler = async (_request, h) => {
     try {
         const histories = [];
-        const snapshot = await firestore.collection('prediction').get();
+        const snapshot = await firestore.collection('predictions').get();
         
         snapshot.forEach(doc => {
             histories.push(doc.data());
